@@ -1,0 +1,10 @@
+*.zip
+*.log
+__pycache__/
+.pytest_cache/
+edge_smoke_profile*/
+test_profile*/
+企业信息截图/
+*.csv
+.env
+.env.*

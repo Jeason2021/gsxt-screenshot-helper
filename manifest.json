@@ -1,0 +1,32 @@
+{
+  "manifest_version": 3,
+  "name": "国家企业信用信息截图助手",
+  "version": "1.2.2",
+  "description": "人工核对企业详情后保存 JPG，支持候选名单、去重和采集记录。",
+  "permissions": [
+    "downloads",
+    "storage"
+  ],
+  "host_permissions": [
+    "<all_urls>"
+  ],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "action": {
+    "default_popup": "popup.html",
+    "default_title": "企业截图助手"
+  },
+  "content_scripts": [
+    {
+      "matches": [
+        "https://*.gsxt.gov.cn/*",
+        "https://www.gsxt.gov.cn/*"
+      ],
+      "js": [
+        "content.js"
+      ],
+      "run_at": "document_idle"
+    }
+  ]
+}
